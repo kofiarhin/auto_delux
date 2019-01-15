@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 	class Mechanic  {
@@ -9,12 +9,11 @@
 		public function __construct() {
 
 			$this->db = db::get_instance();
+
 		}
 
 
 		public function create($fields) {
-
-
 
 			//login insert
 			$email = $fields['email'];
@@ -54,8 +53,6 @@
 			if($user_insert) {
 
 				//mechanic insert
-
-
 				$mechanic_fields  = array(
 
 					'user_id' => $user_insert,
@@ -85,9 +82,9 @@
 				$message = Mail::send($email, $subject, $body);
 
 
-				
 
-				
+
+
 			}
 
 

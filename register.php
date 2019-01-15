@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 require_once "base.php";
@@ -17,7 +17,7 @@ if(input::exist('post', 'register_submit')) {
 		'email' => array(
 
 
-			'required' => true, 
+			'required' => true,
 			'unique' => 'logins'
 		),
 
@@ -70,8 +70,6 @@ if(input::exist('post', 'register_submit')) {
 
 		if($account) {
 
-
-
 			redirect::to("login.php");
 
 
@@ -86,7 +84,7 @@ if(input::exist('post', 'register_submit')) {
 	}
 
 
-	
+
 
 
 }
@@ -94,7 +92,7 @@ if(input::exist('post', 'register_submit')) {
 ?>
 
 
-<?php 
+<?php
 
 require_once "header.php";
 
@@ -103,7 +101,7 @@ require_once "header.php";
 
 
 <section id="register">
-	
+
 	<div class="container">
 
 		<h1 class="display-4 text-center">Create An Account</h1>
@@ -118,7 +116,7 @@ require_once "header.php";
 
 
 
-				<?php 
+				<?php
 
 
 				if(!empty($errors)) {
@@ -129,7 +127,7 @@ require_once "header.php";
 						?>
 						<p class="alert alert-danger"><?php echo $error; ?></p>
 
-						<?php 
+						<?php
 					}
 				}
 
@@ -164,7 +162,7 @@ require_once "header.php";
 
 						<label for="password"><strong>Password</strong></label>
 						<input type="password" class="form-control" name="password" placeholder="Enter Password" value='<?php echo input::get('password'); ?>'>
-						
+
 					</div>
 
 
@@ -175,10 +173,10 @@ require_once "header.php";
 						<input type="number" class="form-control" name="contact" placeholder="Enter Contact eg 0508025370" value='<?php echo input::get('contact'); ?>'>
 					</div>
 
-					
+
 
 					<div class="form-group">
-						
+
 
 						<button class="btn btn-primary btn-lg btn-block" type="submit" name="register_submit">Create</button>
 					</div>
@@ -186,11 +184,11 @@ require_once "header.php";
 
 
 					<div class="form-group">
-						
+
 						<p class="lead">Sign up as a  <strong><a href="register_mechanic.php">Mechanic</a></strong></p>
 					</div>
 
-				</form>					
+				</form>
 			</div>
 
 
@@ -204,5 +202,3 @@ require_once "header.php";
 
 
 </section>
-
-
